@@ -120,7 +120,7 @@ $ gist REPORT.md
 1. Скачайте библиотеку *boost* с помощью утилиты **wget**. Адрес для скачивания `https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz`.
 ```sh
  wget https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz
-<details><summary>
+<details> ...<summary>
 --2023-05-28 18:29:34--  https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz
 Resolving sourceforge.net (sourceforge.net)... 104.18.11.128, 104.18.10.128, 2606:4700::6812:a80, ...
 Connecting to sourceforge.net (sourceforge.net)|104.18.11.128|:443... connected.</summary>
@@ -138,6 +138,7 @@ Location: https://downloads.sourceforge.net/project/boost/boost/1.69.0/boost_1_6
 Resolving downloads.sourceforge.net (downloads.sourceforge.net)... 204.68.111.105
 Connecting to downloads.sourceforge.net (downloads.sourceforge.net)|204.68.111.105|:443... connected.
 HTTP request sent, awaiting response... 302 Found
+
 Location: https://deac-ams.dl.sourceforge.net/project/boost/boost/1.69.0/boost_1_69_0.tar.gz [following]
 --2023-05-28 18:29:36--  https://deac-ams.dl.sourceforge.net/project/boost/boost/1.69.0/boost_1_69_0.tar.gz
 Resolving deac-ams.dl.sourceforge.net (deac-ams.dl.sourceforge.net)... 185.34.27.55
@@ -161,7 +162,13 @@ boost_1_69_0.tar.gz     100%[===============================>] 106.53M   777KB/s
 
 2023-05-28 18:31:54 (808 KB/s) - ‘boost_1_69_0.tar.gz’ saved [111710205/111710205]
 ```
+
+```sh
 2. Разархивируйте скаченный файл в директорию `~/boost_1_69_0`
+
+```
+
+```sh
 3. Подсчитайте количество файлов в директории `~/boost_1_69_0` **не включая** вложенные директории.
   (kali㉿kali)-[~/HECCYLLIujTbmy/workspace]
 └─$  tree -a -L 1
@@ -175,7 +182,9 @@ boost_1_69_0.tar.gz     100%[===============================>] 106.53M   777KB/s
 └── tasks
 
 6 directories, 1 file
+```
 
+```sh
 4. Подсчитайте количество файлов в директории `~/boost_1_69_0` **включая** вложенные директории.
  tree -a
 .
@@ -198,24 +207,26 @@ boost_1_69_0.tar.gz     100%[===============================>] 106.53M   777KB/s
 │   │   │   │   ├── extractor.hpp
 │   │   │   │   ├── features.hpp
 │   │   │   │   └── parameters
+```
 
+```sh
 5. Подсчитайте количество заголовочных файлов, файлов с расширением `.cpp`, сколько остальных файлов (не заголовочных и не `.cpp`).
 └─$ find -name '*.h' | wc -l
 296
+
 ─$ find -name '*.cpp' | wc -l
 13774
 
 └─$ find '!' -name '*.h' -a '!' -name '*.cpp' | wc -l
 52759
-
-
+```
+```sh
 6. Найдите полный пусть до файла `any.hpp` внутри библиотеки *boost*.
 $  readlink -f any.hpp
 /home/kali/HECCYLLIujTbmy/workspace/boost_1_69_0/any.hpp
-
-
-                                                        
-13. Выведите в консоль все файлы, где упоминается последовательность `boost::asio`.
+```
+```sh                                                        
+7. Выведите в консоль все файлы, где упоминается последовательность `boost::asio`.
 $ grep -rl 'boost::asio' 
 
 <details><summary>...</summary>
@@ -1983,10 +1994,150 @@ doc/html/boost/process/async_pipe.html
 doc/html/boost/process/std_in.html
 doc/html/boost/process/std_out.html
 </details>
-15. Скомпилирутйе *boost*. Можно воспользоваться [инструкцией](https://www.boost.org/doc/libs/1_61_0/more/getting_started/unix-variants.html#or-build-custom-binaries) или [ссылкой](https://codeyarns.com/2017/01/24/how-to-build-boost-on-linux/).
-17. Перенесите все скомпилированные на предыдущем шаге статические библиотеки в директорию `~/boost-libs`.
-18. Подсчитайте сколько занимает дискового пространства каждый файл в этой директории.
-19. Найдите *топ10* самых "тяжёлых".
+
+```sh
+8. Скомпилирутйе *boost*. Можно воспользоваться [инструкцией](https://www.boost.org/doc/libs/1_61_0/more/getting_started/unix-variants.html#or-build-custom-binaries) или [ссылкой](https://codeyarns.com/2017/01/24/how-to-build-boost-on-linux/).
+cd tools/build/
+$ ./boosttrap.sh
+
+Bootstrapping the build engine with toolset gcc... engine/bin.linuxx86_64/b2
+
+Bootstrapping is done. To build and install, run:
+./b2 install --prefix=<DIR>
+/b2 install --prefix=boost_output
+```
+
+```sh
+9. Перенесите все скомпилированные на предыдущем шаге статические библиотеки в директорию `~/boost-libs`.
+$ mv boost_1_69_0/tools/build/boost_output/ boost-libs
+
+```
+
+```sh
+11. Подсчитайте сколько занимает дискового пространства каждый файл в этой директории.
+$ du -h
+20K     ./example/make
+12K     ./example/variant/libs
+32K     ./example/variant
+24K     ./example/gettext
+16K     ./example/time
+20K     ./example/generator
+20K     ./example/qt/qt4/hello
+12K     ./example/qt/qt4/moccable-cpp
+16K     ./example/qt/qt4/uic
+52K     ./example/qt/qt4
+20K     ./example/qt/qt3/hello
+12K     ./example/qt/qt3/moccable-cpp
+16K     ./example/qt/qt3/uic
+52K     ./example/qt/qt3
+112K    ./example/qt
+16K     ./example/hello
+8.0K    ./example/libraries/util/foo/include
+20K     ./example/libraries/util/foo
+24K     ./example/libraries/util
+12K     ./example/libraries/app
+44K     ./example/libraries
+8.0K    ./example/sass/include
+28K     ./example/sass
+40K     ./example/customization
+12K     ./example/built_tool/tblgen
+12K     ./example/built_tool/core
+36K     ./example/built_tool
+8.0K    ./example/pch/include
+8.0K    ./example/pch/source
+24K     ./example/pch
+20K     ./example/testing
+20K     ./example/python_modules
+16K     ./example/try_compile
+24K     ./example/complex-testing
+16K     ./example/asciidoctor
+24K     ./example/generate
+548K    ./example
+56K     ./src/kernel
+28K     ./src/engine/boehm_gc/Mac_files
+236K    ./src/engine/boehm_gc/include/private
+432K    ./src/engine/boehm_gc/include
+72K     ./src/engine/boehm_gc/tests
+124K    ./src/engine/boehm_gc/cord
+476K    ./src/engine/boehm_gc/doc
+3.6M    ./src/engine/boehm_gc
+28K     ./src/engine/debian
+48K     ./src/engine/modules
+5.0M    ./src/engine
+268K    ./src/util
+56K     ./src/contrib
+12K     ./src/options
+16K     ./src/tools/xsltproc
+44K     ./src/tools/generators
+208K    ./src/tools/features
+120K    ./src/tools/types
+8.0K    ./src/tools/doxygen
+1.7M    ./src/tools
+764K    ./src/build
+7.9M    ./src
+184K    ./test/qt5
+8.0K    ./test/prebuilt/ext/debug
+8.0K    ./test/prebuilt/ext/release
+40K     ./test/prebuilt/ext
+56K     ./test/prebuilt
+96K     ./test/qt4
+48K     ./test/core-language
+12K     ./test/test2
+24K     ./test/project-test4/lib
+12K     ./test/project-test4/lib2
+72K     ./test/project-test4
+16K     ./test/project-test3/lib3
+12K     ./test/project-test3/lib
+12K     ./test/project-test3/lib2/helper
+28K     ./test/project-test3/lib2
+76K     ./test/project-test3
+8.0K    ./test/railsys/program/include
+12K     ./test/railsys/program/liba
+12K     ./test/railsys/program/main
+44K     ./test/railsys/program
+12K     ./test/railsys/libx/src
+8.0K    ./test/railsys/libx/include
+28K     ./test/railsys/libx
+76K     ./test/railsys
+16K     ./test/boostbook
+8.0K    ./test/startup/bootstrap-env
+8.0K    ./test/startup/no-bootstrap2
+12K     ./test/startup/boost-root/build
+20K     ./test/startup/boost-root
+8.0K    ./test/startup/bootstrap-explicit
+8.0K    ./test/startup/no-bootstrap1/subdir
+16K     ./test/startup/no-bootstrap1
+8.0K    ./test/startup/no-bootstrap3
+8.0K    ./test/startup/bootstrap-implicit
+80K     ./test/startup
+100K    ./test/toolset-mock/src
+120K    ./test/toolset-mock
+1.9M    ./test
+36K     ./notes
+656K    ./doc/html
+8.0K    ./doc/src/pygments
+8.0K    ./doc/src/hljs/styles
+28K     ./doc/src/hljs
+416K    ./doc/src
+1.1M    ./doc
+12M     .
+
+
+```
+```sh
+11. Найдите *топ10* самых "тяжёлых".
+$ sudo du -a | sort -n -r | head -n 10
+11644   .
+8024    ./src
+5072    ./src/engine
+3684    ./src/engine/boehm_gc
+1908    ./test
+1712    ./src/tools
+1084    ./doc
+764     ./src/build
+736     ./src/engine/boehm_gc/configure
+656     ./doc/html
+
 
 ```
 Copyright (c) 2015-2021 The ISC Authors
