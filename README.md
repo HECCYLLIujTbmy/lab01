@@ -1,5 +1,5 @@
 ## Laboratory work I
-
+<details><summary>Toggle me!</summary>Peek a boo!</details>
 Данная лабораторная работа посвещена изучению утилит для разработки проектов
 
 ## Tasks
