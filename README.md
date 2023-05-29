@@ -125,6 +125,7 @@ $ gist REPORT.md
 
 <details><summary>wget https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz</summary>
 
+ ```sh
 --2023-05-28 18:29:34--  https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz
 Resolving sourceforge.net (sourceforge.net)... 104.18.11.128, 104.18.10.128, 2606:4700::6812:a80, ...
 Connecting to sourceforge.net (sourceforge.net)|104.18.11.128|:443... connected.</summary>
@@ -158,7 +159,7 @@ Resolving nav.dl.sourceforge.net (nav.dl.sourceforge.net)... 5.154.224.27
 Connecting to nav.dl.sourceforge.net (nav.dl.sourceforge.net)|5.154.224.27|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 111710205 (107M) [application/x-gzip]</details>
-
+```
 
 
 
