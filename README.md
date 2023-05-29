@@ -11,9 +11,9 @@
 ## Tutorial
 
 ```bash
-$ export GITHUB_USERNAME=<имя_пользователя>
+$ export GITHUB_USERNAME=HECCYLLIujTbmy
 $ export GIST_TOKEN=<сохраненный_токен>
-$ alias edit=<nano|vi|vim|subl>
+$ alias edit=nano
 ```
 
 ```sh
@@ -115,7 +115,7 @@ $ gist REPORT.md
 - [tree](https://linux.die.net/man/1/tree)
 - [vim](http://www.vim.org)
 
-## Homework
+## Homework - P.S Я делал эту лабу, только почему то отчет не сохранился на гите 😢
 
 1. Скачайте библиотеку *boost* с помощью утилиты **wget**. Адрес для скачивания `https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz`.
 ```sh
