@@ -119,7 +119,52 @@ $ gist REPORT.md
 
 1. Скачайте библиотеку *boost* с помощью утилиты **wget**. Адрес для скачивания `https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz`.
 ```sh
- wget https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz
+
+
+
+
+<details><summary>  wget https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz </summary> --2023-05-28 18:29:34--  https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz
+Resolving sourceforge.net (sourceforge.net)... 104.18.11.128, 104.18.10.128, 2606:4700::6812:a80, ...
+Connecting to sourceforge.net (sourceforge.net)|104.18.11.128|:443... connected.</summary>
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz/ [following]
+--2023-05-28 18:29:35--  https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz/
+Reusing existing connection to sourceforge.net:443.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz/download [following]
+--2023-05-28 18:29:35--  https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz/download
+Reusing existing connection to sourceforge.net:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://downloads.sourceforge.net/project/boost/boost/1.69.0/boost_1_69_0.tar.gz?ts=gAAAAABkc9XQRrdp8fkDxsqN84PHXdYAPHmOeEQdgZUtag-2XDA-a-zOq41jdH_P8Ze-DQ5PHKTfTagoXEiB6-3CmQ_Yff_-yA%3D%3D&use_mirror=deac-ams&r= [following]
+--2023-05-28 18:29:35--  https://downloads.sourceforge.net/project/boost/boost/1.69.0/boost_1_69_0.tar.gz?ts=gAAAAABkc9XQRrdp8fkDxsqN84PHXdYAPHmOeEQdgZUtag-2XDA-a-zOq41jdH_P8Ze-DQ5PHKTfTagoXEiB6-3CmQ_Yff_-yA%3D%3D&use_mirror=deac-ams&r=
+Resolving downloads.sourceforge.net (downloads.sourceforge.net)... 204.68.111.105
+Connecting to downloads.sourceforge.net (downloads.sourceforge.net)|204.68.111.105|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+
+Location: https://deac-ams.dl.sourceforge.net/project/boost/boost/1.69.0/boost_1_69_0.tar.gz [following]
+--2023-05-28 18:29:36--  https://deac-ams.dl.sourceforge.net/project/boost/boost/1.69.0/boost_1_69_0.tar.gz
+Resolving deac-ams.dl.sourceforge.net (deac-ams.dl.sourceforge.net)... 185.34.27.55
+Connecting to deac-ams.dl.sourceforge.net (deac-ams.dl.sourceforge.net)|185.34.27.55|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://downloads.sourceforge.net/project/boost/boost/1.69.0/boost_1_69_0.tar.gz?download&failedmirror=deac-ams.dl.sourceforge.net [following]
+--2023-05-28 18:29:37--  https://downloads.sourceforge.net/project/boost/boost/1.69.0/boost_1_69_0.tar.gz?download&failedmirror=deac-ams.dl.sourceforge.net
+Connecting to downloads.sourceforge.net (downloads.sourceforge.net)|204.68.111.105|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://nav.dl.sourceforge.net/project/boost/boost/1.69.0/boost_1_69_0.tar.gz [following]
+--2023-05-28 18:29:38--  https://nav.dl.sourceforge.net/project/boost/boost/1.69.0/boost_1_69_0.tar.gz
+Resolving nav.dl.sourceforge.net (nav.dl.sourceforge.net)... 5.154.224.27
+Connecting to nav.dl.sourceforge.net (nav.dl.sourceforge.net)|5.154.224.27|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 111710205 (107M) [application/x-gzip]</details>
+
+
+
+```
+
+```sh
+
+
+
 <details><summary>
 --2023-05-28 18:29:34--  https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz
 Resolving sourceforge.net (sourceforge.net)... 104.18.11.128, 104.18.10.128, 2606:4700::6812:a80, ...
