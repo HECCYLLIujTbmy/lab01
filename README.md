@@ -123,7 +123,7 @@ $ gist REPORT.md
 
 
 
-<details><summary>  wget https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz </summary> --2023-05-28 18:29:34--  https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz
+<details><summary>wget https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz</summary> --2023-05-28 18:29:34--  https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz
 Resolving sourceforge.net (sourceforge.net)... 104.18.11.128, 104.18.10.128, 2606:4700::6812:a80, ...
 Connecting to sourceforge.net (sourceforge.net)|104.18.11.128|:443... connected.</summary>
 HTTP request sent, awaiting response... 301 Moved Permanently
