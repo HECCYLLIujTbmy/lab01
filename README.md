@@ -157,7 +157,7 @@ Location: https://nav.dl.sourceforge.net/project/boost/boost/1.69.0/boost_1_69_0
 Resolving nav.dl.sourceforge.net (nav.dl.sourceforge.net)... 5.154.224.27
 Connecting to nav.dl.sourceforge.net (nav.dl.sourceforge.net)|5.154.224.27|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 111710205 (107M) [application/x-gzip] </details>
+Length: 111710205 (107M) [application/x-gzip]</details>
 
 
 
