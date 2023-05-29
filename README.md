@@ -168,11 +168,6 @@ Length: 111710205 (107M) [application/x-gzip]</details>
 
 
 
-```sh
-
-
-
-
 
 Saving to: ‘boost_1_69_0.tar.gz’
 
